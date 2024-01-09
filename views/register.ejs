@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <style>
+    /* Additional styles specific to the register page can go here */
+  </style>
+</head>
+<body>
+  <form action="/register" method="post">
+    <div class="ring">
+      <!-- <i style="--clr:#00ff0a;"></i>
+      <i style="--clr:#ff0057;"></i>
+      <i style="--clr:#fffd44;"></i> -->
+      <div class="login">
+        <h2>Register</h2>
+        <% if (error && error.length > 0) { %>
+            <p class="flash-error" style="color: red; font-weight: 400; text-transform: capitalize; margin: 7px 0;">
+              <%= error %>
+            </p>
+          <% } %>
+        <div class="inputBx">
+          <input type="text" placeholder="Name" name="name" required>
+        </div>
+        <div class="inputBx">
+          <input type="date" placeholder="Date of Birth" name="dob" required>
+        </div>
+        <div class="inputBx">
+          <input type="email" placeholder="Email" name="email" required>
+        </div>  
+        <div class="inputBx">
+            <input type="text" placeholder="Username" name="username" required>
+          </div>
+        <div class="inputBx">
+          <input type="password" placeholder="Password" name="password" required>
+        </div>
+        <div class="inputBx">
+          <input type="submit" value="REGISTER">
+        </div>
+        <div class="links">
+          <a href="/">Already have an account? Login</a>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
